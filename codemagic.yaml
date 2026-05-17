@@ -17,7 +17,7 @@ workflows:
         script: cordova platform rm android || true
 
       - name: Add Android platform
-        script: cordova platform add android
+        script: cordova platform add android@13
 
       - name: Build Android APK
         script: cordova build android

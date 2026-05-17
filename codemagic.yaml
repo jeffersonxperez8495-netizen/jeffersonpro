@@ -18,11 +18,6 @@ workflows:
       - name: Add Android platform
         script: cordova platform add android@13
 
-      - name: Install Android SDK 34
-        script: |
-          yes | sdkmanager "platforms;android-34"
-          yes | sdkmanager "build-tools;34.0.0"
-
       - name: Build Android APK
         script: cordova build android
 

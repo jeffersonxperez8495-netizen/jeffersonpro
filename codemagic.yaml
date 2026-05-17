@@ -7,17 +7,21 @@ workflows:
       node: 18
 
     scripts:
-      - name: Install dependencies
+      - name: Install Cordova globally
+        script: npm install -g cordova
+
+      - name: Install project dependencies
         script: npm install
 
-      - name: Install Cordova
-        script: npm install -g cordova
+      - name: Clean previous platforms
+        script: cordova platform rm android || true
 
       - name: Add Android platform
         script: cordova platform add android
 
-      - name: Build APK
-        script: cordova build android --release
+      - name: Build Android APK
+        script: cordova build android
 
     artifacts:
-      - platforms/android/app/build/outputs/**/*.apk
+      - platforms/android/app/build/outputs/apk/**/*.apk
+      - platforms/android/**/outputs/**/*.apk

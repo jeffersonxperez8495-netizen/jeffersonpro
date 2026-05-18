@@ -4,6 +4,7 @@ workflows:
 
     environment:
       node: 18
+      java: 17
 
     scripts:
       - name: Install Cordova globally
@@ -15,8 +16,13 @@ workflows:
       - name: Clean previous platforms
         script: cordova platform rm android || true
 
+      - name: Install Android SDK 34
+        script: |
+          sdkmanager "platforms;android-34"
+          sdkmanager "build-tools;34.0.0"
+
       - name: Add Android platform
-        script: cordova platform add android@13
+        script: cordova platform add android@12
 
       - name: Build Android APK
         script: cordova build android

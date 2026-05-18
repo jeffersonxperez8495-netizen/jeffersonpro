@@ -1,23 +1,18 @@
 {
   "name": "jeffersonpro",
-  "displayName": "JeffersonPro",
   "version": "1.0.0",
-  "description": "Calculadora eléctrica Jefferson Pro",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo ok"
-  },
-  "keywords": [
-    "cordova"
-  ],
-  "author": "Jefferson Pro",
-  "license": "Apache-2.0",
+  "displayName": "jeffersonpro",
+  "description": "Cordova Android App",
+  "private": true,
   "cordova": {
     "platforms": [
+      "browser",
       "android"
-    ]
+    ],
+    "plugins": {}
   },
+  "scripts": {},
   "devDependencies": {
-    "cordova-android": "11.0.0"
+    "cordova-android": "^12.0.1"
   }
 }

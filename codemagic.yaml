@@ -1,0 +1,15 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+
+    environment:
+      node: 18
+
+    scripts:
+      - npm install
+      - cordova platform remove android || true
+      - cordova platform add android@12
+      - cordova build android
+
+    artifacts:
+      - platforms/android/app/build/outputs/**/*.apk

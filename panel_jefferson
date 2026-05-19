@@ -1,0 +1,47 @@
+# PANEL JEFFERSON
+
+print("=== PANEL JEFFERSON ===")
+
+# VOLUMEN
+volumen = 50
+
+print("Volumen actual:")
+print(volumen)
+
+print("Subiendo volumen")
+volumen = volumen + 10
+
+print("Nuevo volumen:")
+print(volumen)
+
+print("Bajando volumen")
+volumen = volumen - 20
+
+print("Volumen actual:")
+print(volumen)
+
+# CAPTURA
+captura_tomada = True
+
+if captura_tomada:
+    print("Captura de pantalla guardada")
+
+# FLASH
+flash = True
+
+if flash:
+    print("Flash activado")
+
+# WIFI
+wifi = True
+
+if wifi:
+    print("WiFi activado")
+
+# BLUETOOTH
+bluetooth = False
+
+if bluetooth == False:
+    print("Bluetooth desactivado")
+
+print("=== PANEL JEFFERSON CERRADO ===")
